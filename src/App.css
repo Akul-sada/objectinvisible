@@ -1,0 +1,47 @@
+.App{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.upload-boxes-parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  gap: 2rem;
+  overflow: scroll;
+  margin-bottom: 3rem;
+}
+/* styling for individual upload box starts */
+.upload-box{
+  width: calc(33.33% - 2rem);
+  height: 15rem;
+  border: 2px solid green;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg-red{
+  background-color: red;
+}
+.bg-orange{
+  background-color: orange;
+}
+.bg-blue{
+  background-color: #082ED0;
+}
+.border-red{
+  border:6px solid red;
+}
+.border-orange{
+  border:6px solid orange;
+}
+.border-blue{
+  border:6px solid #082ED0;
+}
+  /* styling for individual upload box ends */
+
+
