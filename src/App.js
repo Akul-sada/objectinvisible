@@ -1,14 +1,18 @@
 // import logo from './logo.svg';
 import './App.css';
+import ImageUploadBox from './ImageUploadBox';
 
 
 function App() {
+  // add photo upload functionality
+  // 1) take permission of the camera device
   return (
     <div className="App">
       <div className='upload-boxes-parent'>
-        <div className='upload-box bg-red border-red'><h3>upload the object image</h3></div>
-        <div className='upload-box bg-orange border-orange'><h3>upload the object initial point</h3></div>
-        <div className='upload-box bg-blue border-blue'><h3>upload the object final point</h3></div>
+        <ImageUploadBox className="upload-box" bgColor="red" borderColor="red" label="upload the object image"/>
+        <ImageUploadBox bgColor="orange" borderColor="orange" label="upload the object's initial point"/>
+        <ImageUploadBox bgColor="yellow" borderColor="yellow" label="upload the object image"/>
+        <ImageUploadBox bgColor="blue" borderColor="blue" label="upload the object final point"/>
       </div>
       <div className="">
         <h2><span className='bg-red'>THIS OBJECT IS COMPLETELY OUT</span> <span className='bg-orange'>FROM THIS  POINT  <span>&amp;</span></span> <span className='bg-blue'>COMPLETELY IN AT THIS POINT  <span>&infin;</span></span></h2>

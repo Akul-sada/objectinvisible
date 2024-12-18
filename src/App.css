@@ -12,17 +12,24 @@
   height: 60vh;
   gap: 2rem;
   overflow: scroll;
+  cursor: pointer;
+  overflow: hidden;
   margin-bottom: 3rem;
+  object-fit: cover;
+  
 }
 /* styling for individual upload box starts */
 .upload-box{
-  width: calc(33.33% - 2rem);
-  height: 15rem;
-  border: 2px solid green;
+  width: 18rem;
+  height: 20rem;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  object-fit: cover;
+}
+.fit-object{
+  object-fit: cover;
 }
 .bg-red{
   background-color: red;
@@ -33,6 +40,9 @@
 .bg-blue{
   background-color: #082ED0;
 }
+.bg-yellow{
+  background-color: yellow;
+}
 .border-red{
   border:6px solid red;
 }
@@ -42,6 +52,22 @@
 .border-blue{
   border:6px solid #082ED0;
 }
+.border-yellow{
+  border:6px solid yellow;
+}
+
+/* Styling for error  */
+.error-message {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff000055;
+  color: red;
+  text-align: center;
+  padding: 5px;
+}
   /* styling for individual upload box ends */
+  
 
 
