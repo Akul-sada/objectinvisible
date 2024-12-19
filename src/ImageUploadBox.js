@@ -37,6 +37,7 @@ const ImageUploadBox =({bgColor,borderColor,label})=>{
     const handleClick = ()=>{
         fileInputRef.current.click();
     }
+    
     return(
         <>
             <div className={`upload-box bg-${bgColor} border-${borderColor}`} onClick={handleClick}>

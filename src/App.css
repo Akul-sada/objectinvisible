@@ -1,37 +1,42 @@
-.App{
+.App {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 0 2rem;
-
-  
 }
-.upload-boxes-parent{
+
+.upload-boxes-parent {
   display: flex;
-  justify-content: center;
+  flex-wrap: nowrap; /* Prevent flex items from wrapping */
+  justify-content: flex-start; /* Start aligning items from the left */
   align-items: center;
   height: 60vh;
   gap: 2rem;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-y: hidden; /* Hide vertical overflow */
+  overflow-x: auto;   /* Enable horizontal scroll */
   margin-bottom: 3rem;
-  object-fit: cover;
-  width: 100%;
-  
+  width: 100%;        /* Use full width */
+  max-width: 100vw;   /* Prevent it from exceeding the viewport width */
+  box-sizing: border-box; /* Include padding and border in width calculations */
 }
-/* styling for individual upload box starts */
-.upload-box{
-  width: 18rem;
-  height: 20rem;
+
+.upload-box {
+  width: 30rem;
+  height: 30rem;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   object-fit: cover;
   cursor: pointer;
-  
+  min-width: 18rem; /* Ensure each box maintains its size */
+  flex-shrink: 0;   /* Prevent boxes from shrinking below min-width */
 }
+.upload-text{
+  font-size: 2rem;
+}
+
 .fit-object{
   object-fit: cover;
 }
@@ -73,14 +78,26 @@
 }
   /* styling for individual upload box ends */
 
-  /* styling for statement */
-  .scroll{
-    overflow-x: scroll;
-  }
-  .statement{
+  .statement {
     padding: 0 15px;
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
   }
-@media (max-width:1200px) {
   
-}
+  .scroll {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical overflow */
+  }
+  
+  /* Optional: Set a fixed width for the .statement to ensure scrolling works properly */
+  .statement h2 {
+    display: inline-block; /* Allow the h2 to be scrolled */
+  }
+  
+  /* Adjust the media query to ensure proper styling on smaller screens */
+  @media (max-width: 1200px) {
+    .statement {
+      width: 100%; /* Set the width to 100% on smaller screens */
+      overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    }
+  }
 
