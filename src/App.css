@@ -12,7 +12,6 @@
   height: 60vh;
   gap: 2rem;
   overflow: scroll;
-  cursor: pointer;
   overflow: hidden;
   margin-bottom: 3rem;
   object-fit: cover;
@@ -27,6 +26,7 @@
   align-items: center;
   justify-content: center;
   object-fit: cover;
+  cursor: pointer;
 }
 .fit-object{
   object-fit: cover;
@@ -44,16 +44,16 @@
   background-color: yellow;
 }
 .border-red{
-  border:6px solid red;
+  border:10px solid red;
 }
 .border-orange{
-  border:6px solid orange;
+  border:10px solid orange;
 }
 .border-blue{
-  border:6px solid #082ED0;
+  border:10px solid #082ED0;
 }
 .border-yellow{
-  border:6px solid yellow;
+  border: 10px solid yellow;
 }
 
 /* Styling for error  */

@@ -15,7 +15,7 @@ function App() {
         <ImageUploadBox bgColor="blue" borderColor="blue" label="upload the object final point"/>
       </div>
       <div className="">
-        <h2><span className='bg-red'>THIS OBJECT IS COMPLETELY OUT</span> <span className='bg-orange'>FROM THIS  POINT  <span>&amp;</span></span> <span className='bg-blue'>COMPLETELY IN AT THIS POINT  <span>&infin;</span></span></h2>
+        <h2><span className='bg-red'>THIS OBJECT IS COMPLETELY OUT</span> <span className='bg-orange'>FROM THIS  POINT  <span>&amp;</span></span> <span className='bg-blue'>COMPLETELY IN AT THIS POINT  <span style={{}}>&infin;</span></span></h2>
       </div>
     </div>
   );
