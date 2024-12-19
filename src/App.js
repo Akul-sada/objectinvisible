@@ -14,7 +14,7 @@ function App() {
         <ImageUploadBox bgColor="yellow" borderColor="yellow" label="upload the object image"/>
         <ImageUploadBox bgColor="blue" borderColor="blue" label="upload the object final point"/>
       </div>
-      <div className="scroll">
+      <div className="statement scroll">
         <h2><span className='bg-red'>THIS OBJECT IS COMPLETELY OUT</span> <span className='bg-orange'>FROM THIS  POINT  <span>&amp;</span></span> <span className='bg-blue'>COMPLETELY IN AT THIS POINT  <span style={{fontSize:'9rem'}}>&infin;</span></span></h2>
       </div>
     </div>

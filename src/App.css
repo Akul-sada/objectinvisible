@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 2rem;
 
   
 }
@@ -73,6 +74,10 @@
   .scroll{
     overflow: scroll;
   }
+  .statement{
+    padding: 0 15px;
+  }
+@media (max-width:1200px) {
   
-
+}
 
