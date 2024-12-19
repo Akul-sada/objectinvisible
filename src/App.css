@@ -13,9 +13,11 @@
   align-items: center;
   height: 60vh;
   gap: 2rem;
-  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: scroll;
   margin-bottom: 3rem;
   object-fit: cover;
+  width: 100%;
   
 }
 /* styling for individual upload box starts */
@@ -28,6 +30,7 @@
   justify-content: center;
   object-fit: cover;
   cursor: pointer;
+  
 }
 .fit-object{
   object-fit: cover;
@@ -72,7 +75,7 @@
 
   /* styling for statement */
   .scroll{
-    overflow: scroll;
+    overflow-x: scroll;
   }
   .statement{
     padding: 0 15px;
