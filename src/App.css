@@ -81,6 +81,8 @@
   .statement {
     padding: 0 15px;
     white-space: nowrap; /* Prevent text from wrapping to a new line */
+    font-size: 2rem;
+  
   }
   
   .scroll {
