@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import ImageUploadBox from './ImageUploadBox';
+import ImageUploadBox from './ImageUploadBoxInitial';
 
 
 function App() {
