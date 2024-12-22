@@ -94,7 +94,13 @@
   .statement h2 {
     display: inline-block; /* Allow the h2 to be scrolled */
   }
+  .margin-bottom-2{
+    margin-bottom: 2rem;
+  }
   
+
+
+
   /* Adjust the media query to ensure proper styling on smaller screens */
   @media (max-width: 1200px) {
     .statement {
