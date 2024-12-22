@@ -80,15 +80,15 @@
 
   .statement {
     padding: 0 15px;
-    white-space: nowrap; /* Prevent text from wrapping to a new line */
+    text-wrap: wrap;
     font-size: 2rem;
   
   }
   
-  .scroll {
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Hide vertical overflow */
-  }
+  /* .scroll {
+    overflow-x: auto; Enable horizontal scrolling
+    /* overflow-y: hidden; /* Hide vertical overflow */
+  
   
   /* Optional: Set a fixed width for the .statement to ensure scrolling works properly */
   .statement h2 {

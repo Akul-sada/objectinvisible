@@ -9,6 +9,7 @@ const ImageUploadBox =({bgColor,borderColor,label})=>{
 
     const handleImageUpload = (event)=>{
         const file = event.target.files[0];
+        console.log(file);
 
         // Image Validation
         if(file){
@@ -41,7 +42,7 @@ const ImageUploadBox =({bgColor,borderColor,label})=>{
     return(
         <>
             <div className={`upload-box bg-${bgColor} border-${borderColor}`} onClick={handleClick}>
-                <input type='file' ref={fileInputRef} onChange={handleImageUpload} accept="image/jpeg,image/png,image/gif" style={{display:'none'}}/>
+                <input required type='file' ref={fileInputRef} onChange={handleImageUpload} accept="image/jpeg,image/png,image/gif" style={{display:'none'}}/>
                 {error && <div className='error-message'>{error}</div>}
                 {!image ? (<div className='upload-text'>{label}</div>):(<img style={{objectFit:'cover',width:'100%',height:'100%'}} src={image} alt="uploaded-image"/>)}
             </div>
