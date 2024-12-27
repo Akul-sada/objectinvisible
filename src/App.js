@@ -6,7 +6,7 @@ import './InputSubmitButton.css';
 function App() {
   const [images, setImages] = useState({
     objectImage: null,
-    initialPoint: null,
+    // initialPoint: null,
     finalPoint: null,
   });
 
@@ -20,10 +20,10 @@ function App() {
       return;
     }
     
-    if (!images.initialPoint) {
-      alert("Please upload the initial point image");
-      return;
-    }
+    // if (!images.initialPoint) {
+    //   alert("Please upload the initial point image");
+    //   return;
+    // }
     
     if (!images.finalPoint) {
       alert("Please upload the final point image");
@@ -43,12 +43,12 @@ function App() {
           label="Upload the object image"
           onImageUpload={(image) => handleImageUpload(image, 'objectImage')}
         />
-        <ImageUploadBox
+        {/* <ImageUploadBox
           bgColor="orange"
           borderColor="orange"
           label="Upload the object's initial point"
           onImageUpload={(image) => handleImageUpload(image, 'initialPoint')}
-        />
+        /> */}
         <ImageUploadBox
           bgColor="blue"
           borderColor="blue"
@@ -59,7 +59,7 @@ function App() {
       <div className="statement">
         <h2>
           <span className="bg-red">THIS OBJECT IS COMPLETELY OUT</span>{' '}
-          <span className="bg-orange">FROM THIS POINT{' '}
+          <span className="bg-red">FROM THIS POINT{' '}
             <span>&amp;</span>
           </span>{' '}
           <span className="bg-blue">COMPLETELY IN AT THIS POINT{' '}
