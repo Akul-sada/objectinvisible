@@ -112,3 +112,28 @@
     }
   }
 
+.prevent-select {
+  /* Disable text selection */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  
+  /* Optional: disable highlighting on touch devices */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.statement,
+.statement * {
+  /* Disable text selection for the container and all child elements */
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  
+  /* Prevent highlighting on touch devices */
+  -webkit-tap-highlight-color: transparent;
+  
+  /* Ensure pointer events still work */
+  pointer-events: auto;
+}
+

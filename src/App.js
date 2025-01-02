@@ -89,7 +89,7 @@ function App() {
         />
       </div>
       <div className="statement">
-        <h2>
+        <h2 className='prevent-select'>
           <span className="bg-red">-·....·..·...·---·-...·.---·.·-.-.·-·..·...·-.-.·---·--·.--.·.-..·.·-·.·.-..·-.--·---·..-·-</span>{' '}
           <span className="bg-red">..-.·.-.·---·--·-·....·..·...·.--.·---·..·-.·-{' '}
             <span>&amp;</span>
