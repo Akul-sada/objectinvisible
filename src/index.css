@@ -20,3 +20,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Styling for payment button */
+.green-btn{
+  padding: 5px;
+  border-radius: 8px;
+  /* 8px = .8rem */
+  all: unset;
+  border: 2px solid green;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: green;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px ;
+  padding: 5px 4rem;
+  width: 35vw;
+  font-size: 2rem;
+}
+.payment-modal{
+  display:flex;
+  flex-direction: column;
+}
+
+.close-payment{
+  display: inline-block;
+}
+

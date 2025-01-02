@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import ImageUploadBox from './ImageUploadBox';
 import './InputSubmitButton.css';
+import Modal from 'react-modal';
+
 
 function App() {
   const [images, setImages] = useState({
@@ -9,6 +11,18 @@ function App() {
     // initialPoint: null,
     finalPoint: null,
   });
+
+  // code to open and close modal
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   const handleImageUpload = (image, type) => {
     setImages((prevImages) => ({ ...prevImages, [type]: image }));
@@ -36,6 +50,24 @@ function App() {
 
   return (
     <div className="App">
+      <div className='top-green-btn'>
+            <button onClick={openModal} className='green-btn'>Click here to make Payment</button>
+
+      </div>
+    <Modal
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            style={{ background: 'red' }}
+          >
+            <div className='payment-modal'>
+
+
+              <button className="close-payment btn" onClick={closeModal}>close</button>
+
+              <h2>GooglePayNUMBER👉 +91-9964281778</h2>
+              <img alt="GooglePayNUMBER👉+91-9964215560" style={{ maxWidth: '30%' }} src='./image.jpg' />
+            </div>
+          </Modal>
       <div className="upload-boxes-parent">
         <ImageUploadBox
           bgColor="red"

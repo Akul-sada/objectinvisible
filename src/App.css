@@ -33,6 +33,7 @@
   min-width: 18rem; /* Ensure each box maintains its size */
   flex-shrink: 0;   /* Prevent boxes from shrinking below min-width */
 }
+
 .upload-text{
   font-size: 2rem;
 }
@@ -91,9 +92,11 @@
   
   
   /* Optional: Set a fixed width for the .statement to ensure scrolling works properly */
+
   .statement h2 {
     display: inline-block; /* Allow the h2 to be scrolled */
   }
+
   .margin-bottom-2{
     margin-bottom: 2rem;
   }

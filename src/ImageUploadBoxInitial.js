@@ -11,8 +11,6 @@ const ImageUploadBox = ({ bgColor, borderColor, label }) => {
 
     const handleImageUpload = (event) => {
         const file = event.target.files[0];
-        console.log(file);
-
         // Image Validation
         if (file) {
             const validTypes = ["image/jpeg", "image/png", "image/gif"];
@@ -49,7 +47,6 @@ const ImageUploadBox = ({ bgColor, borderColor, label }) => {
                     {error && <div className='error-message'>{error}</div>}
                     {!image ? (<div className='upload-text'>{label}</div>) : (<img style={{ objectFit: 'cover', width: '100%', height: '100%' }} src={image} alt="uploaded-image" />)}
                 </div>
-                
             </form>
         </>
     );
