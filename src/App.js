@@ -1,27 +1,80 @@
-// import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
-import ImageUploadBox from './ImageUploadBoxInitial';
-
+import ImageUploadBox from './ImageUploadBox';
+import './InputSubmitButton.css';
 
 function App() {
-  // add photo upload functionality
-  // 1) take permission of the camera device
-  const onSubmit =()=>{
-    window.location.reload() ;
-  }
+  const [images, setImages] = useState({
+    objectImage: null,
+    // initialPoint: null,
+    finalPoint: null,
+  });
+
+  const handleImageUpload = (image, type) => {
+    setImages((prevImages) => ({ ...prevImages, [type]: image }));
+  };
+
+  const handleSubmit = () => {
+    if (!images.objectImage) {
+      alert("Please upload the object image");
+      return;
+    }
+    
+    // if (!images.initialPoint) {
+    //   alert("Please upload the initial point image");
+    //   return;
+    // }
+    
+    if (!images.finalPoint) {
+      alert("Please upload the final point image");
+      return;
+    }
+
+    console.log("All images uploaded successfully!");
+    window.location.reload();
+  };
+
   return (
     <div className="App">
-      <div className='upload-boxes-parent'>
-        <ImageUploadBox bgColor="red" borderColor="red" label="upload the object image"/>
-        {/* <ImageUploadBox bgColor="orange" borderColor="orange" label="upload the object's initial point"/> */}
-        {/* <ImageUploadBox bgColor="yellow" borderColor="yellow" label="upload the object image"/> */}
-        <ImageUploadBox bgColor="blue" borderColor="blue" label="upload the object final point"/>
+      <div className="upload-boxes-parent">
+        <ImageUploadBox
+          bgColor="red"
+          borderColor="red"
+          label="Upload the object image"
+          onImageUpload={(image) => handleImageUpload(image, 'objectImage')}
+        />
+        {/* <ImageUploadBox
+          bgColor="orange"
+          borderColor="orange"
+          label="Upload the object's initial point"
+          onImageUpload={(image) => handleImageUpload(image, 'initialPoint')}
+        /> */}
+        <ImageUploadBox
+          bgColor="blue"
+          borderColor="blue"
+          label="Upload the object final point"
+          onImageUpload={(image) => handleImageUpload(image, 'finalPoint')}
+        />
       </div>
       <div className="statement">
-        <h2><span className='bg-red'>-·....·..·...·---·-...·.---·.·-.-.·-·..·...·-.-.·---·--·.--.·.-..·.·-·.·.-..·-.--·---·..-·-</span> <span className='bg-red'>..-.·.-.·---·--·-·....·..·...·.--.·---·..·-.·-  <span>&amp;</span></span> <span className='bg-blue'>-.-.·---·--·.--.·.-..·.·-·.·.-..·-.--·..·-.·.-·-·-·....·..·...·.--.·---·..·-.·-  <span style={{fontSize:'9rem'}}>&infin;</span></span></h2>
+        <h2>
+          <span className="bg-red">THIS OBJECT IS COMPLETELY OUT</span>{' '}
+          <span className="bg-red">FROM THIS POINT{' '}
+            <span>&amp;</span>
+          </span>{' '}
+          <span className="bg-blue">COMPLETELY IN AT THIS POINT{' '}
+            <span style={{ fontSize: '9rem' }}>&infin;</span>
+          </span>
+        </h2>
       </div>
       <div>
-          <input onClick={onSubmit} type="submit" className='button-71' value="Submit"/>
+        <button 
+          type="button" 
+          className="button-71" 
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
       </div>
     </div>
   );
