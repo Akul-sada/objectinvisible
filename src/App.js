@@ -90,11 +90,11 @@ function App() {
       </div>
       <div className="statement">
         <h2>
-          <span className="bg-red">THIS OBJECT IS COMPLETELY OUT</span>{' '}
-          <span className="bg-red">FROM THIS POINT{' '}
+          <span className="bg-red">-·....·..·...·---·-...·.---·.·-.-.·-·..·...·-.-.·---·--·.--.·.-..·.·-·.·.-..·-.--·---·..-·-</span>{' '}
+          <span className="bg-red">..-.·.-.·---·--·-·....·..·...·.--.·---·..·-.·-{' '}
             <span>&amp;</span>
           </span>{' '}
-          <span className="bg-blue">COMPLETELY IN AT THIS POINT{' '}
+          <span className="bg-blue">-.-.·---·--·.--.·.-..·.·-·.·.-..·-.--·..·-.·.-·-·-·....·..·...·.--.·---·..·-.·-{' '}
             <span style={{ fontSize: '9rem' }}>&infin;</span>
           </span>
         </h2>
